@@ -12,7 +12,7 @@ from ovos_workshop.skills.common_play import OVOSCommonPlaybackSkill
 class WTvFDigitalGrindhouseDriveInSkill(OVOSCommonPlaybackSkill):
     def __init__(self, *args, **kwargs):
         self.supported_media = [MediaType.MOVIE]
-        self.skill_icon = join(dirname(__file__), "ui", "logo.jpg")
+        self.skill_icon = join(dirname(__file__), "res", "logo.jpg")
         self.default_bg = self.skill_icon
         self.archive = JsonStorageXDG("WTvFDigitalGrindhouseDriveIn", subfolder="OCP")
         super().__init__(*args, **kwargs)
@@ -111,4 +111,4 @@ if __name__ == "__main__":
     s = WTvFDigitalGrindhouseDriveInSkill(bus=FakeBus(), skill_id="t.fake")
     for r in s.search_db("Plan 9 from Outer Space", MediaType.MOVIE):
         print(r)
-        # {'title': 'Plan 9 from Outer Space (1959) *public domain', 'author': 'WTvF! - Digital Grindhouse & Drive-In', 'match_confidence': 45, 'media_type': <MediaType.MOVIE: 10>, 'uri': 'youtube//https://youtube.com/watch?v=4z6VLR2GA1w', 'playback': <PlaybackType.VIDEO: 1>, 'skill_icon': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'skill_id': 't.fake', 'image': 'https://i.ytimg.com/vi/4z6VLR2GA1w/sddefault.jpg', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-WTvFDigitalGrindhouseDriveIn/ui/logo.jpg'}
+        # {'title': 'Plan 9 from Outer Space (1959) *public domain', 'author': 'WTvF! - Digital Grindhouse & Drive-In', 'match_confidence': 45, 'media_type': <MediaType.MOVIE: 10>, 'uri': 'youtube//https://youtube.com/watch?v=4z6VLR2GA1w', 'playback': <PlaybackType.VIDEO: 1>, 'skill_icon': 'https://github.com/OpenVoiceOS/ovos-ocp-audio-plugin/raw/master/ovos_plugin_common_play/ocp/res/ui/images/ocp.png', 'skill_id': 't.fake', 'image': 'https://i.ytimg.com/vi/4z6VLR2GA1w/sddefault.jpg', 'bg_image': '/home/miro/PycharmProjects/OCP_sprint/skills/skill-WTvFDigitalGrindhouseDriveIn/res/logo.jpg'}
